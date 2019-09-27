@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='Demential Helper V2'
