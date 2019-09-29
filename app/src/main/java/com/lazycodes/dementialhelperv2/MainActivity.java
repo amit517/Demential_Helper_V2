@@ -40,9 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private InputStream inputStream;
     private Button startButton;
     private Button stopButton;
-
-
-
+    private ImageView dementiaIV;
 
 
     boolean deviceConnected=false;
@@ -50,13 +48,6 @@ public class MainActivity extends AppCompatActivity {
     byte buffer[];
     int bufferPosition;
     private boolean stopThread;
-    static boolean videoPlaying = false;
-
-
-
-    public static void setVideoPlaying(boolean videoPlaying) {
-        MainActivity.videoPlaying = videoPlaying;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         startButton = findViewById(R.id.buttonStart);
         stopButton = findViewById(R.id.buttonStop);
+        dementiaIV = findViewById(R.id.main_dementia_IV);
 
 
 
@@ -211,6 +203,7 @@ public class MainActivity extends AppCompatActivity {
                                             e.printStackTrace();
                                         }*/
                                         // Calling to Load Play Video
+                                        dementiaIV.setVisibility(View.GONE);
                                         FragmentLoader fragmentLoader = new FragmentLoader();
                                         fragmentLoader.start();
                              }
@@ -262,8 +255,5 @@ public class MainActivity extends AppCompatActivity {
         ft.commit();
         Objects.requireNonNull(ft);
     }
-
-
-
 
 }

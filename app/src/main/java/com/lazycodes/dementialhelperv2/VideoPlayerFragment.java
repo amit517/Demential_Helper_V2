@@ -52,7 +52,7 @@ public class VideoPlayerFragment extends Fragment implements Player.EventListene
         playerView = v.findViewById(R.id.player_view);
         thisContext = container.getContext();
         dementiaIV = v.findViewById(R.id.demantiaIV);
-
+        dementiaIV.setVisibility(View.GONE);
 
         return v;
     }
