@@ -13,6 +13,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.os.Handler;
@@ -41,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
     private Button stopButton;
 
 
+
+
+
     boolean deviceConnected=false;
     Thread thread;
     byte buffer[];
@@ -63,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         startButton = findViewById(R.id.buttonStart);
         stopButton = findViewById(R.id.buttonStop);
+
+
 
         setUiEnabled(false);
     }
@@ -204,14 +210,11 @@ public class MainActivity extends AppCompatActivity {
                                         } catch (InterruptedException e) {
                                             e.printStackTrace();
                                         }*/
-
                                         // Calling to Load Play Video
                                         FragmentLoader fragmentLoader = new FragmentLoader();
                                         fragmentLoader.start();
-
-
-
                              }
+
 
                                 }
                             });
